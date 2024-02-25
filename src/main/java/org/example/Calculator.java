@@ -1,7 +1,7 @@
 package org.example;
 
 public class Calculator {
-    public static String comparisonAverageValueArray(float[] arrayLeft, float[] arrayRight){
+    public static String comparisonAverageValueArray(int[] arrayLeft, int[] arrayRight){
 
         if(averageValueArray(arrayLeft) > averageValueArray((arrayRight))){
 
@@ -18,12 +18,11 @@ public class Calculator {
         }
     }
 
-    public static float averageValueArray(float[] array){
+    public static int averageValueArray(int[] array){
         float summ = 0;
 
         for (float value : array) {
             summ += value;
         }
-        return summ/array.length;
-    }
+        return Math.round(summ/array.length);    }
 }
